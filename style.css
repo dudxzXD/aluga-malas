@@ -1,0 +1,727 @@
+/* ---- Variáveis Globais (Design) ---- */
+:root {
+    --primary-color: #007bff; /* Azul */
+    --secondary-color: #6c757d; /* Cinza */
+    --light-color: #f8f9fa; /* Cinza claro */
+    --dark-color: #343a40; /* Preto */
+    --text-color: #495057;
+    --border-color: #dee2e6;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* ---- Reset Básico ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* ---- Botões (CTA) ---- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--dark-color);
+    border: 1px solid var(--border-color);
+}
+.btn-secondary:hover {
+    background-color: var(--light-color);
+}
+
+/* ---- Header / Navegação ---- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    font-weight: 500;
+}
+nav ul li a.active,
+nav ul li a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+nav .user-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* ---- Página Inicial: Hero (Banner) ---- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://via.placeholder.com/1500x500.png?text=Banner+de+Malas') 
+                center center/cover no-repeat;
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* ---- Página Inicial: Seções (Como Funciona, Destaques) ---- */
+.highlights, .featured-products, .testimonials {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.highlights h2, .featured-products h2, .testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.step {
+    flex-basis: 300px;
+    padding: 1.5rem;
+}
+
+.step span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.step h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+/* ---- Cards de Produto (Home e Catálogo) ---- */
+.product-grid, .catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.25rem;
+    margin: 1rem;
+    color: var(--dark-color);
+}
+
+.product-card p {
+    margin: 0 1rem;
+}
+
+.product-card .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+}
+
+.product-card .btn {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+}
+
+/* ---- Página de Catálogo (Filtros) ---- */
+.filters {
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.filters h3 {
+    margin-bottom: 1rem;
+}
+
+.filters form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* ---- Página de Detalhes ---- */
+.product-detail-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.product-gallery .main-image {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.thumbnail-grid img {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-info h1 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+}
+
+.product-info .price-per-day {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.sanitized-badge {
+    background-color: #e6f7ff;
+    color: #0056b3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.product-info ul {
+    margin: 1rem 0 1rem 1.25rem;
+}
+
+#booking-form {
+    margin-top: 1.5rem;
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.date-picker {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.total-price {
+    margin: 1.5rem 0;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.total-price h3 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#total-price-display {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.btn-large {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+/* ---- Seção de Avaliações (Novo Estilo) ---- */
+.testimonials {
+    /* Fundo sutil para destacar a seção */
+    background-color: var(--light-color); 
+    padding: 4rem 0; /* Mais espaçamento vertical */
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem; /* Mais espaço abaixo do título */
+    color: var(--dark-color);
+}
+
+/* A grade que segura os cards */
+.testimonial-grid {
+    display: grid;
+    /* * Cria colunas responsivas:
+     * - Tenta criar colunas de 300px.
+     * - Se não couber, elas quebram a linha e ocupam o espaço (1fr).
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Garante respiro nas laterais em telas menores */
+    text-align: left; /* Alinha o texto dos cards à esquerda */
+}
+
+/* O card de avaliação individual */
+.review-card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    /* Sombra suave para dar profundidade */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    
+    /* Flexbox para alinhar o autor no final */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-stars {
+    font-size: 1.25rem;
+    color: #f0c419; /* Cor de estrela (amarelo/dourado) */
+    margin-bottom: 1rem;
+}
+
+/* Estilizando o texto da avaliação (citação) */
+.review-card blockquote {
+    font-size: 1.05rem; /* Um pouco maior para leitura */
+    font-style: italic;
+    color: var(--text-color);
+    margin: 0;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    /* Faz o texto ocupar o espaço disponível, empurrando o autor para baixo */
+    flex-grow: 1; 
+}
+
+/* Container do autor (Avatar + Nome) */
+.review-author {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.review-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Avatar redondo */
+    margin-right: 1rem;
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+}
+
+.author-info strong {
+    display: block;
+    color: var(--dark-color);
+    font-size: 1.1rem;
+}
+
+.author-info span {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* ---- Página Sobre Nós ---- */
+
+/* Layout da Missão (Imagem + Texto) */
+.about-mission {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin: 2rem 0 4rem 0; /* Espaçamento */
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Layout dos Diferenciais (Cards) */
+.our-differentials {
+    background-color: var(--light-color);
+    padding: 3rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.our-differentials h2 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 2.5rem;
+}
+
+.differentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.diff-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+
+.diff-card span { /* Ícone */
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.diff-card h3 {
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+/* Seção da Equipe */
+.our-team {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.our-team h2 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.our-team p {
+    font-size: 1.1rem;
+    max-width: 800px; /* Limita a largura do texto */
+    margin: 0 auto 1.5rem auto;
+}
+
+.team-photo {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ---- Página de Contato ---- */
+.contact-layout {
+    display: grid;
+    /* Duas colunas: 1fr (informações) e 1.5fr (formulário) */
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 3rem; /* Espaço maior entre as colunas */
+    margin-top: 2rem;
+}
+
+.contact-info h3,
+.contact-form-section h3 {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.contact-item {
+    margin-bottom: 1.5rem;
+}
+
+.contact-item strong {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    display: block;
+}
+
+.contact-item p {
+    margin: 0.25rem 0;
+}
+
+.contact-item p a {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.contact-item p a:hover {
+    text-decoration: underline;
+}
+
+.contact-item span {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.contact-map {
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o iframe obedeça ao border-radius */
+    border: 1px solid var(--border-color);
+}
+
+/* ---- Formulário de Contato ---- */
+.contact-form-section .form-group {
+    margin-bottom: 1rem;
+}
+
+/* Adiciona 'textarea' ao seletor existente */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--font-family); /* Garante a mesma fonte */
+}
+
+/* Permite apenas o redimensionamento vertical */
+.form-group textarea {
+    resize: vertical; 
+}
+
+/* ---- Widget de Chat Flutuante ---- */
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    z-index: 1000; /* Garante que fique por cima de tudo */
+}
+
+.chat-widget:hover {
+    transform: scale(1.1);
+}
+
+/* ---- Ajuste de Responsividade para Contato ---- */
+@media (max-width: 900px) { /* Um pouco antes de 768px */
+    .contact-layout {
+        grid-template-columns: 1fr; /* Colunas empilhadas */
+    }
+}
+
+/* Ajuste de Responsividade para a "Sobre" */
+@media (max-width: 800px) {
+    .about-mission {
+        grid-template-columns: 1fr; /* Coluna única em telas pequenas */
+    }
+    
+    .about-image {
+        order: -1; /* Joga a imagem para cima em telas mobile */
+    }
+
+    .about-text h1 {
+        font-size: 2rem;
+    }
+}
+/* ---- Footer ---- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    margin-top: 3rem;
+}
+footer a {
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    
+    /* Página de Detalhes */
+    .product-detail-page {
+        grid-template-columns: 1fr;
+    }
+
+    /* Página de Contato */
+    .contact-layout {
+        grid-template-columns: 1fr; /* Colunas empilhadas */
+    }
+
+    /* Página Sobre Nós */
+    .about-mission {
+        grid-template-columns: 1fr; /* Coluna única em telas pequenas */
+    }
+    
+    .about-image {
+        order: -1; /* Joga a imagem para cima em telas mobile */
+    }
+
+    .about-text h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/* ---- Breakpoint 2: Celulares (<= 768px) ---- */
+@media (max-width: 768px) {
+    
+    /* Navegação (esconde o menu principal) */
+    nav ul {
+        display: none; 
+    }
+
+    /* Ajusta o padding da nav para telas menores */
+    nav {
+        padding: 1rem;
+    }
+    
+    /* Banner Principal (Home) */
+    .hero {
+        padding: 4rem 1rem;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    /* Passos (Home) */
+    .steps {
+        flex-direction: column;
+    }
+    
+    /* Filtros (Catálogo) */
+    .filters form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Seleção de Data (Detalhes) */
+    .date-picker {
+        flex-direction: column;
+    }
+}

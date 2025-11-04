@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Aluguel de Malas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🧭 ViajeLeve</div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="catalogo.html" class="active">Catálogo</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="user-actions">
+                <a href="#" class="btn btn-secondary">Login</a>
+                <a href="#" class="btn">Cadastre-se</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Nosso Catálogo</h1>
+        <p>Escolha a mala ideal para sua próxima aventura.</p>
+
+        <aside class="filters">
+            <h3>Filtros</h3>
+            <form id="filter-form">
+                <div class="form-group">
+                    <label for="tamanho">Tamanho:</label>
+                    <select id="tamanho" name="tamanho">
+                        <option value="">Todos</option>
+                        <option value="p">P (Bordo)</option>
+                        <option value="m">M (Média)</option>
+                        <option value="g">G (Grande)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo">
+                        <option value="">Todos</option>
+                        <option value="rigida">Rígida</option>
+                        <option value="flexivel">Flexível</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="data">Disponibilidade:</label>
+                    <input type="date" id="data" name="data">
+                </div>
+                <button type="submit" class="btn">Filtrar</button>
+            </form>
+        </aside>
+
+        <section class="catalog-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Mala+Rígida+P" alt="Mala Rígida P">
+                <h3>Mala Rígida (P) - Bordo</h3>
+                <p>Material: Policarbonato</p>
+                <p class="price">R$ 12,00/dia</p>
+                <a href="detalhes-mala.html" class="btn">Ver detalhes</a>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Mala+Flexível+M" alt="Mala Flexível M">
+                <h3>Mala Flexível (M)</h3>
+                <p>Material: Poliéster</p>
+                <p class="price">R$ 15,00/dia</p>
+                <a href="detalhes-mala.html" class="btn">Ver detalhes</a>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Mala+Rígida+G" alt="Mala Rígida G">
+                <h3>Mala Rígida (G)</h3>
+                <p>Material: ABS</p>
+                <p class="price">R$ 18,00/dia</p>
+                <a href="detalhes-mala.html" class="btn">Ver detalhes</a>
+            </div>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ViajeLeve - Aluguel de Malas.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
