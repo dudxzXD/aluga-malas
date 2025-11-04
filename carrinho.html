@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Travel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">🧭 Travel</div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li id="cart-link"><a href="carrinho.html">Carrinho <span id="cart-count"></span></a></li>
+            </ul>
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="cadastro.html" class="btn">Cadastre-se</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Meu Carrinho</h1>
+
+        <div class="cart-layout">
+            <section id="cart-items-container">
+            </section>
+
+            <aside class="cart-summary">
+                <h2>Resumo do Pedido</h2>
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">R$ 0,00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Taxa de Higienização:</span>
+                    <span>R$ 10,00</span>
+                </div>
+                <div class="summary-row total">
+                    <strong>Total:</strong>
+                    <strong id="cart-total">R$ 10,00</strong>
+                </div>
+                <button class="btn btn-primary btn-large">Finalizar Aluguel</button>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Travel - Aluguel de Malas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

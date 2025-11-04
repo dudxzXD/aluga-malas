@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes da Mala - Aluguel de Malas</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav>
             <div class="logo">🧭 Travel</div>
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="catalogo.html" class="active">Catálogo</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
                 <li><a href="sobre.html">Sobre Nós</a></li>
                 <li><a href="contato.html">Contato</a></li>
+                <li id="cart-link"><a href="carrinho.html">Carrinho <span id="cart-count"></span></a></li>
             </ul>
             <div class="user-actions">
-                <a href="#" class="btn btn-secondary">Login</a>
-                <a href="#" class="btn">Cadastre-se</a>
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="cadastro.html" class="btn">Cadastre-se</a>
             </div>
         </nav>
     </header>
 
     <main class="container product-detail-page">
         <section class="product-gallery">
-            <img src="https://via.placeholder.com/500x500.png?text=Mala+Premium+Zoom" alt="Mala Premium" class="main-image">
+            <img src="https://via.placeholder.com/500x500.png?text=Mala+Premium+Zoom" alt="Mala Premium"
+                class="main-image">
             <div class="thumbnail-grid">
                 <img src="https://via.placeholder.com/100x100.png?text=Mala+1" alt="Thumbnail 1">
                 <img src="https://via.placeholder.com/100x100.png?text=Mala+2" alt="Thumbnail 2">
@@ -36,11 +40,12 @@
         <section class="product-info">
             <h1>Mala Rígida (M) - Premium</h1>
             <p class="price-per-day" data-price-per-day="15">R$ 15,00 / dia</p>
-            
+
             <p class="sanitized-badge">🧼 Sanitizada em 01/11/2025</p>
 
-            <p>Descrição completa da mala, ideal para viagens de 7 a 10 dias. Material ultrarresistente, rodas 360º, cadeado TSA embutido e compartimentos internos inteligentes.</p>
-            
+            <p>Descrição completa da mala, ideal para viagens de 7 a 10 dias. Material ultrarresistente, rodas 360º,
+                cadeado TSA embutido e compartimentos internos inteligentes.</p>
+
             <ul>
                 <li><strong>Dimensões:</strong> 65cm x 45cm x 25cm</li>
                 <li><strong>Peso:</strong> 3.2kg</li>
@@ -76,4 +81,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

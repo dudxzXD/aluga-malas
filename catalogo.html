@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo - Aluguel de Malas</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav>
             <div class="logo">🧭 Travel</div>
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="catalogo.html" class="active">Catálogo</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
                 <li><a href="sobre.html">Sobre Nós</a></li>
                 <li><a href="contato.html">Contato</a></li>
+                <li id="cart-link"><a href="carrinho.html">Carrinho <span id="cart-count"></span></a></li>
             </ul>
             <div class="user-actions">
-                <a href="#" class="btn btn-secondary">Login</a>
-                <a href="#" class="btn">Cadastre-se</a>
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="cadastro.html" class="btn">Cadastre-se</a>
             </div>
         </nav>
     </header>
@@ -77,7 +80,7 @@
                 <p class="price">R$ 18,00/dia</p>
                 <a href="detalhes-mala.html" class="btn">Ver detalhes</a>
             </div>
-            </section>
+        </section>
     </main>
 
     <footer>
@@ -86,4 +89,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
